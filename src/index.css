@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F6F0E8;
+    color: #3B2F2A;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-aura-dark text-aura-bg px-8 py-3 font-body font-medium tracking-widest uppercase text-xs transition-all duration-300 hover:bg-aura-accent hover:shadow-md;
+  }
+
+  .btn-outline {
+    @apply border border-aura-dark text-aura-dark px-8 py-3 font-body font-medium tracking-widest uppercase text-xs transition-all duration-300 hover:bg-aura-dark hover:text-aura-bg;
+  }
+
+  .btn-accent {
+    @apply bg-aura-accent text-aura-bg px-8 py-3 font-body font-medium tracking-widest uppercase text-xs transition-all duration-300 hover:bg-aura-accent2 hover:shadow-md;
+  }
+
+  .section-title {
+    @apply font-display text-4xl md:text-5xl text-aura-dark font-light tracking-wide;
+  }
+
+  .section-subtitle {
+    @apply font-body text-xs tracking-[0.25em] uppercase text-aura-accent font-medium;
+  }
+
+  .card-shadow {
+    @apply shadow-[0_4px_20px_rgba(59,47,42,0.08)] hover:shadow-[0_8px_30px_rgba(59,47,42,0.14)] transition-shadow duration-500;
+  }
+
+  .input-field {
+    @apply w-full bg-transparent border-b border-aura-light py-3 font-body text-sm text-aura-dark placeholder-aura-muted outline-none focus:border-aura-accent transition-colors duration-300;
+  }
+
+  .divider {
+    @apply w-12 h-px bg-aura-accent mx-auto my-4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EDE3;
+}
+::-webkit-scrollbar-thumb {
+  background: #B86F52;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A65A42;
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+/* Star rating */
+.star-filled { color: #B86F52; }
+.star-empty { color: #D4C4B8; }
+
+/* Image hover */
+.img-hover-zoom {
+  overflow: hidden;
+}
+.img-hover-zoom img {
+  transition: transform 0.7s ease;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.04);
+}
