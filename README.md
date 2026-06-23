@@ -27,7 +27,4 @@ Backend must run at http://localhost:5000
 
 🔐 Roles
 FeatureUserAdminBrowse/Cart/Reviews✅✅Add/Edit/Delete Styles❌✅Admin Dashboard❌✅
-🎨 Design
-Warm beige palette · Cormorant Garamond + Montserrat · Luxury minimalist style
 
-Timeless Elegance in Every Fold 🌸You said: sahi h githup k liye
