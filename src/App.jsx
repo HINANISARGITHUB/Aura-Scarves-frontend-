@@ -24,6 +24,7 @@ import AdminEditStyle from './pages/admin/AdminEditStyle'
 import AdminUsers from './pages/admin/AdminUsers'
 import ProtectedRoute from './components/ProtectedRoute'
 import AdminRoute from './components/AdminRoute'
+import OrdersPage from './pages/OrderPage'
 
 export default function App() {
   return (
@@ -52,6 +53,7 @@ export default function App() {
                   <Route path="/admin/styles/edit/:id" element={<AdminRoute><AdminEditStyle /></AdminRoute>} />
                   <Route path="/admin/users" element={<AdminRoute><AdminUsers /></AdminRoute>} />
                   <Route path="*" element={<NotFoundPage />} />
+                  <Route path="/orders" element={<ProtectedRoute><OrdersPage /></ProtectedRoute>} />
                 </Routes>
               </main>
               <Footer />

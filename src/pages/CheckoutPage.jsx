@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FiCheck } from 'react-icons/fi'
 import { useCart } from '../context/CartContext'
+import axios from 'axios'
 
 const PLACEHOLDER = 'https://images.unsplash.com/photo-1529139574466-a303027614b8?w=100&q=60'
 
@@ -16,11 +17,35 @@ export default function CheckoutPage() {
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   await clearCart()
+  //   setPlaced(true)
+  // }
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
+  e.preventDefault()
+  try {
+    const orderItems = cartItems.map(item => ({
+      style: item.style?._id,
+      title: item.style?.title,
+      image: item.style?.images?.[0],
+      price: item.style?.price,
+      quantity: item.quantity,
+    }))
+
+    await axios.post('/api/orders', {
+      items: orderItems,
+      totalAmount: cartTotal,
+      shippingInfo: form,
+    })
+
     await clearCart()
     setPlaced(true)
+  } catch (err) {
+    alert('Something went wrong. Please try again.')
   }
+}
 
   if (placed) return (
     <div className="pt-20 min-h-screen bg-aura-bg flex flex-col items-center justify-center px-6 text-center">
