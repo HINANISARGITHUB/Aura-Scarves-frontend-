@@ -20,10 +20,8 @@ import axios from 'axios'
 import App from './App'
 import './index.css'
 
-// Production mein backend URL set karo
-if (import.meta.env.VITE_API_URL) {
-  axios.defaults.baseURL = import.meta.env.VITE_API_URL
-}
+
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -32,5 +30,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>
 )
-
-
