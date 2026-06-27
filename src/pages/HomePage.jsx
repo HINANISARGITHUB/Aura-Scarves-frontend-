@@ -93,7 +93,7 @@ export default function HomePage() {
               initial="hidden"
               animate="visible"
               custom={0}
-              className="font-body text-[10px] tracking-[0.4em] uppercase text-aura-accent mb-6"
+              className="font-body text-[10px] tracking-[0.4em] uppercase text-[#f0977e] mb-6"
             >
               Luxury Modest Fashion
             </motion.p>

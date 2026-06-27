@@ -35,7 +35,7 @@ export default function AboutPage() {
     <div className="pt-20 bg-aura-bg overflow-hidden">
 
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center">
+      <section className="relative min-h-[100vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${about})` }} />
         <div className="absolute inset-0 " />
@@ -43,7 +43,7 @@ export default function AboutPage() {
           initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9 }}
           className="relative z-10 text-center px-6"
         >
-          <p className="section-subtitle text-aura-accent mb-5">Our Story</p>
+          <p className="section-subtitle text-[#f0977e] mb-5">Our Story</p>
           <h1 className="font-display text-5xl md:text-7xl text-aura-bg font-light tracking-wide leading-tight mb-6">
             Born from a Love<br /><em>of Modest Beauty</em>
           </h1>

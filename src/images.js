@@ -1,4 +1,4 @@
-export {default as mainbg} from './assets/vela2.jpg'
+export {default as mainbg} from './assets/hero1.png'
 export {default as main_2} from './assets/main-2.jpg'
 export {default as bri_1} from './assets/bri-1.jpg'
 export {default as bri_2} from './assets/bri-2.jpg'
