@@ -2,14 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light !important;
-}
-
-html, body {
-  color-scheme: light !important;
-  background-color: #F6F0E8 !important;
-  color: #3B2F2A !important;
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #F6F0E8 !important;
+    filter: none !important;
+  }
+  body {
+    background-color: #F6F0E8 !important;
+    color: #3B2F2A !important;
+    filter: none !important;
+  }
+  * {
+    color-scheme: light !important;
+  }
 }
 @layer base {
   * {
