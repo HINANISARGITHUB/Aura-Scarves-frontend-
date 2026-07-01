@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: light !important;
 }
 
+html, body {
+  color-scheme: light !important;
+  background-color: #F6F0E8 !important;
+  color: #3B2F2A !important;
+}
 @layer base {
   * {
     box-sizing: border-box;
