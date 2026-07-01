@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light only;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -98,3 +102,4 @@
 .img-hover-zoom:hover img {
   transform: scale(1.04);
 }
+
